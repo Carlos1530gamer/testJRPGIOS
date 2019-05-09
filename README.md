@@ -1,2 +1,2 @@
 # testJRPGIOS
-juego jpg
+juego jrpg creado en el iosDevLab Fi 
