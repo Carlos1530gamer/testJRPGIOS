@@ -13,6 +13,8 @@
 		219C298F2284DA2000848AF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 219C298E2284DA2000848AF9 /* Assets.xcassets */; };
 		219C29922284DA2000848AF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 219C29902284DA2000848AF9 /* LaunchScreen.storyboard */; };
 		219C299B2284DB3A00848AF9 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 219C299A2284DB3A00848AF9 /* art.scnassets */; };
+		219C299E2284DF7000848AF9 /* Creature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219C299D2284DF7000848AF9 /* Creature.swift */; };
+		219C29A12284E23400848AF9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219C29A02284E23400848AF9 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		219C29912284DA2000848AF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		219C29932284DA2000848AF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		219C299A2284DB3A00848AF9 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		219C299D2284DF7000848AF9 /* Creature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creature.swift; sourceTree = "<group>"; };
+		219C29A02284E23400848AF9 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +75,26 @@
 		219C29992284DB2000848AF9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				219C299F2284E22C00848AF9 /* Player */,
+				219C299C2284DF6000848AF9 /* AbstractClass */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		219C299C2284DF6000848AF9 /* AbstractClass */ = {
+			isa = PBXGroup;
+			children = (
+				219C299D2284DF7000848AF9 /* Creature.swift */,
+			);
+			path = AbstractClass;
+			sourceTree = "<group>";
+		};
+		219C299F2284E22C00848AF9 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				219C29A02284E23400848AF9 /* Player.swift */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,8 +169,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				219C29A12284E23400848AF9 /* Player.swift in Sources */,
 				219C298A2284DA1600848AF9 /* ViewController.swift in Sources */,
 				219C29882284DA1600848AF9 /* AppDelegate.swift in Sources */,
+				219C299E2284DF7000848AF9 /* Creature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
