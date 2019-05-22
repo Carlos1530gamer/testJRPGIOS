@@ -26,5 +26,11 @@ class ViewController: UIViewController {
         scene.rootNode.addChildNode(player)
         self.sceneView.scene = scene
     }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        player.playAnimation(.dance)
+    }
+    
 }
 
