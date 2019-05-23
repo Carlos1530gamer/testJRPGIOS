@@ -39,8 +39,6 @@ class Player: Creature , SCNNodeRendererDelegate{
         //
         for childNode in scene.rootNode.childNodes {
             if childNode.name == "player"{
-                self.geometry = childNode.geometry
-                self.geometry?.firstMaterial?.diffuse.contents = UIColor.red
                 for child in childNode.childNodes{
                     self.addChildNode(child)
                 }
