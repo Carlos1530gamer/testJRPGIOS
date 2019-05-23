@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     
     private func loadJoystick(){
         joystick.trackingHandler = {[weak self] data in
-            
+             
         }
         
     }
