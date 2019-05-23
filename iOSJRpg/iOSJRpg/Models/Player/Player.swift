@@ -46,12 +46,14 @@ class Player: Creature , SCNNodeRendererDelegate{
             }
         }
         
-        loadAnimation(withKey: "dance", sceneName: "art.scnassets/Breakdance", animationIdentifier: "Breakdance-1")
+        loadAnimation(withKey: "dance", sceneName: "art.scnassets/Animations/Player/Breakdance", animationIdentifier: "Breakdance-1")
+        
+        loadAnimation(withKey: "stay", sceneName: "art.scnassets/Animations/Player/Idle", animationIdentifier: "Idle-1", isInfinite: true)
     }
     
-    //MARK: public funcs
+    //MARK: private funcs
     
-    func loadAnimation(withKey: String, sceneName:String, animationIdentifier:String) {
+    private func loadAnimation(withKey: String, sceneName:String, animationIdentifier:String) {
         let sceneURL = Bundle.main.url(forResource: sceneName, withExtension: "dae")
         let sceneSource = SCNSceneSource(url: sceneURL!, options: nil)!
         
@@ -65,6 +67,26 @@ class Player: Creature , SCNNodeRendererDelegate{
             animations[withKey] = animationObject
         }
     }
+    
+    private func loadAnimation(withKey: String, sceneName:String, animationIdentifier:String, isInfinite: Bool) {
+        let sceneURL = Bundle.main.url(forResource: sceneName, withExtension: "dae")
+        let sceneSource = SCNSceneSource(url: sceneURL!, options: nil)!
+        
+        if let animationObject = sceneSource.entryWithIdentifier(animationIdentifier, withClass: CAAnimation.self) {
+            if(isInfinite){
+                animationObject.repeatCount = .infinity
+            }else{
+                // The animation will only play once
+                animationObject.repeatCount = 1
+            }
+            // To create smooth transitions between animations
+            animationObject.fadeInDuration = CGFloat(1)
+            animationObject.fadeOutDuration = CGFloat(0.5)
+            // Store the animation for later use
+            self.addAnimation(animationObject, forKey: withKey)
+        }
+    }
+    
     
     func playAnimation(_ animationKey: PlayerAnimation){
         self.addAnimation(animations[animationKey.rawValue]!, forKey: animationKey.rawValue)

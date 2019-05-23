@@ -27,10 +27,10 @@ class ViewController: UIViewController {
         self.sceneView.scene = scene
     }
     
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        player.playAnimation(.dance)
+    private func loadJoystick(){
+        
     }
+    
     
 }
 
