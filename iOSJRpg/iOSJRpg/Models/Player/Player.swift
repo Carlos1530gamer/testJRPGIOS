@@ -16,6 +16,7 @@ enum PlayerAnimation: String {
 class Player: Creature , SCNNodeRendererDelegate{
     var stamina: Double
     var animations = [String: CAAnimation]()
+    var mesh: SCNNode!
     
     init(stamina: Double) {
         self.stamina = stamina
@@ -32,7 +33,7 @@ class Player: Creature , SCNNodeRendererDelegate{
     //MARK: init geometry of this node
     private func loadModel(){
         //load the scene with node
-        guard let path = Bundle.main.path(forResource: "player", ofType: "dae", inDirectory: "art.scnassets") else { return }
+        guard let path = Bundle.main.path(forResource: "player", ofType: "scn", inDirectory: "art.scnassets") else { return }
         let url = URL(fileURLWithPath: path)
         guard let scene = try? SCNScene(url: url, options: nil) else { return }
         
@@ -40,6 +41,9 @@ class Player: Creature , SCNNodeRendererDelegate{
         for childNode in scene.rootNode.childNodes {
             if childNode.name == "player"{
                 for child in childNode.childNodes{
+                    if child.name == "mesh"{
+                        self.mesh = child
+                    }
                     self.addChildNode(child)
                 }
                 self.physicsBody = childNode.physicsBody

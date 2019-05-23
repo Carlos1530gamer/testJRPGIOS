@@ -1,0 +1,16 @@
+PODS:
+  - CDJoystick (1.1.0)
+
+DEPENDENCIES:
+  - CDJoystick
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CDJoystick
+
+SPEC CHECKSUMS:
+  CDJoystick: 5563edf7dbc276cfec6f4606ee2a5b63ee54a15e
+
+PODFILE CHECKSUM: 6ac866c3b9039a186f47519828ec61e47dce808e
+
+COCOAPODS: 1.5.3

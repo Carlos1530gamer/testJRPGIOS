@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		213B1E4A22974BC1003A45F4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213B1E4922974BC1003A45F4 /* Utils.swift */; };
 		213F0E55228B5A1900A3B891 /* Gun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213F0E54228B5A1900A3B891 /* Gun.swift */; };
 		219C29882284DA1600848AF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219C29872284DA1600848AF9 /* AppDelegate.swift */; };
 		219C298A2284DA1600848AF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219C29892284DA1600848AF9 /* ViewController.swift */; };
@@ -16,9 +17,12 @@
 		219C299B2284DB3A00848AF9 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 219C299A2284DB3A00848AF9 /* art.scnassets */; };
 		219C299E2284DF7000848AF9 /* Creature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219C299D2284DF7000848AF9 /* Creature.swift */; };
 		219C29A12284E23400848AF9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219C29A02284E23400848AF9 /* Player.swift */; };
+		49B66687E8A8D55E8BFFF927 /* Pods_iOSJRpg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A99985D226861303096948 /* Pods_iOSJRpg.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1310A7110D7E5A4BE942C9D2 /* Pods-iOSJRpg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSJRpg.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSJRpg/Pods-iOSJRpg.debug.xcconfig"; sourceTree = "<group>"; };
+		213B1E4922974BC1003A45F4 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		213F0E54228B5A1900A3B891 /* Gun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gun.swift; sourceTree = "<group>"; };
 		219C29842284DA1600848AF9 /* iOSJRpg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSJRpg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		219C29872284DA1600848AF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +34,8 @@
 		219C299A2284DB3A00848AF9 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		219C299D2284DF7000848AF9 /* Creature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creature.swift; sourceTree = "<group>"; };
 		219C29A02284E23400848AF9 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		D2A99985D226861303096948 /* Pods_iOSJRpg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSJRpg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE252879953846737644EF6 /* Pods-iOSJRpg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSJRpg.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSJRpg/Pods-iOSJRpg.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B66687E8A8D55E8BFFF927 /* Pods_iOSJRpg.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,11 +57,21 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		213B1E4822974BA9003A45F4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				213B1E4922974BC1003A45F4 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		219C297B2284DA1600848AF9 = {
 			isa = PBXGroup;
 			children = (
 				219C29862284DA1600848AF9 /* iOSJRpg */,
 				219C29852284DA1600848AF9 /* Products */,
+				A9E8E69C02E0FA10260C2008 /* Pods */,
+				4E8308BD430CA09848BED958 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +101,7 @@
 		219C29992284DB2000848AF9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				213B1E4822974BA9003A45F4 /* Utils */,
 				2138F4912297095B00A44F01 /* UI */,
 				219C299F2284E22C00848AF9 /* Player */,
 				219C299C2284DF6000848AF9 /* AbstractClass */,
@@ -108,6 +126,23 @@
 			path = Player;
 			sourceTree = "<group>";
 		};
+		4E8308BD430CA09848BED958 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2A99985D226861303096948 /* Pods_iOSJRpg.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9E8E69C02E0FA10260C2008 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1310A7110D7E5A4BE942C9D2 /* Pods-iOSJRpg.debug.xcconfig */,
+				DFE252879953846737644EF6 /* Pods-iOSJRpg.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 219C29962284DA2000848AF9 /* Build configuration list for PBXNativeTarget "iOSJRpg" */;
 			buildPhases = (
+				06A7E59EE53418E5E8402469 /* [CP] Check Pods Manifest.lock */,
 				219C29802284DA1600848AF9 /* Sources */,
 				219C29812284DA1600848AF9 /* Frameworks */,
 				219C29822284DA1600848AF9 /* Resources */,
+				9F3C0B5642C6CE2AD5DCFAD1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -175,6 +212,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06A7E59EE53418E5E8402469 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSJRpg-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F3C0B5642C6CE2AD5DCFAD1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iOSJRpg/Pods-iOSJRpg-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CDJoystick/CDJoystick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CDJoystick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSJRpg/Pods-iOSJRpg-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		219C29802284DA1600848AF9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -185,6 +269,7 @@
 				219C29882284DA1600848AF9 /* AppDelegate.swift in Sources */,
 				213F0E55228B5A1900A3B891 /* Gun.swift in Sources */,
 				219C299E2284DF7000848AF9 /* Creature.swift in Sources */,
+				213B1E4A22974BC1003A45F4 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +413,7 @@
 		};
 		219C29972284DA2000848AF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1310A7110D7E5A4BE942C9D2 /* Pods-iOSJRpg.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -346,6 +432,7 @@
 		};
 		219C29982284DA2000848AF9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFE252879953846737644EF6 /* Pods-iOSJRpg.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
