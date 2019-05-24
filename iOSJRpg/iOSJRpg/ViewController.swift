@@ -32,9 +32,17 @@ class ViewController: UIViewController {
     
     private func loadJoystick(){
         joystick.trackingHandler = {[weak self] data in
-             
+            self?.player.childNode(withName: "mesh", recursively: true)?.eulerAngles.y = Float(data.angle)
+            if data.velocity.x != 0 || data.velocity.y != 0{
+                self?.player.position.x += Float(data.velocity.x/50)
+                self?.player.position.z += Float(data.velocity.y/50)
+            }
         }
         
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        player.playAnimation(.dance)
     }
     
 }
