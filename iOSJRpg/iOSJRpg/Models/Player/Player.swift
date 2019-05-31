@@ -11,6 +11,7 @@ import SceneKit
 
 enum PlayerAnimation: String {
     case dance = "dance"
+    case run = "run"
 }
 
 class Player: Creature , SCNNodeRendererDelegate{
@@ -51,6 +52,8 @@ class Player: Creature , SCNNodeRendererDelegate{
         }
         
         loadAnimation(withKey: "dance", sceneName: "art.scnassets/Animations/Player/Breakdance", animationIdentifier: "Breakdance-1")
+        
+        loadAnimation(withKey: "run", sceneName: "art.scnassets/Animations/Player/Run", animationIdentifier: "Run-1")
         
         loadAnimation(withKey: "stay", sceneName: "art.scnassets/Animations/Player/Idle", animationIdentifier: "Idle-1", isInfinite: true)
     }
