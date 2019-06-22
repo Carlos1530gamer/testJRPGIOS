@@ -40,14 +40,8 @@ class Player: Creature , SCNNodeRendererDelegate{
         
         //
         for childNode in scene.rootNode.childNodes {
-            if childNode.name == "player"{
-                for child in childNode.childNodes{
-                    if child.name == "mesh"{
-                        self.mesh = child
-                    }
-                    self.addChildNode(child)
-                }
-                self.physicsBody = childNode.physicsBody
+            if childNode.name == "player" {
+                self.addChildNode(childNode)
             }
         }
         

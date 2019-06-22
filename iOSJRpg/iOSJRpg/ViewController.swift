@@ -33,7 +33,6 @@ class ViewController: UIViewController {
     private func loadJoystick(){
         joystick.trackingHandler = {[weak self] data in
             self?.player.childNode(withName: "mesh", recursively: true)?.eulerAngles.y = Float(-data.angle)
-            self?.player.playAnimation(.run)
             if data.velocity.x != 0 || data.velocity.y != 0{
                 self?.player.position.x -= Float(data.velocity.x/10)
                 self?.player.position.z -= Float(data.velocity.y/10)
